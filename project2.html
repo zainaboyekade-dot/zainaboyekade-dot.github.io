@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zainab Oyekade | CODELENS-X</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">Zaite Systems</a>
+        <a href="about.html">About & Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>CODELENS-X</h1>
+    </section>
+
+    <hr>
+
+    <section class="box2">
+        <h2 class="shead">Project Overview</h2>
+
+        <div class="about-content">
+            <img id="headshot" src="images/codelens-x.png" alt="CodeLens-X" width="300">
+
+            <div class="about-text">
+                <p class="p-a-list">
+                    A systems-level code analysis pipeline that integrates LLVM’s clang-tidy
+                    static analyzer with a Python processing layer and LLM-based explanation
+                    engine. The system parses low-level C/C++ diagnostics, structures them into
+                    semantic issue objects, and generates human-readable debugging insights
+                    including severity classification, impact analysis, and fix suggestions.
+
+                    Focused on improving interpretability of compiler-level warnings for safer and more maintainable
+                    C/C++ code.</p>
+                <p>
+                    <a class="link" href="https://github.com/zainaboyekade-dot/codelens-x" target="_blank">GitHub
+                        Repository</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="section-title">Key Features</h2>
+    <ul class="feature-list">
+        <li>Integrates LLVM clang-tidy to perform static analysis on C/C++ source code</li>
+        <li>Parses raw compiler diagnostics into structured issue objects (file, line, rule, severity, message)</li>
+        <li>Implements a multi-stage pipeline: static analysis → parsing → categorization → AI explanation</li>
+        <li>Uses LLMs to generate clear explanations of issues including cause, impact, and fixes</li>
+        <li>Applies deterministic severity mapping to standardize clang-tidy warnings and errors</li>
+        <li>Generates structured, developer-friendly reports for fast debugging and issue review</li>
+        <li>Provides an interactive Streamlit UI for real-time code analysis and visualization</li>
+    </ul>
+
+    <h2 class="section-title">Tools & Technologies Used</h2>
+
+    <h2>Backend & Analysis</h2>
+    <ul class="feature-list">
+        <li class="bullet">Python</li>
+        <li class="bullet">LLVM clang-tidy (Static Analysis Tool)</li>
+        <li class="bullet">Regex-based log parsing</li>
+    </ul>
+
+    <h2>AI Integration</h2>
+    <ul class="feature-list">
+        <li class="bullet">OpenAI API (GPT-4.1-mini)</li>
+        <li class="bullet">Prompt engineering for structured explanations</li>
+    </ul>
+
+    <h2>Frontend</h2>
+    <ul class="feature-list">
+        <li class="bullet">Streamlit</li>
+    </ul>
+
+
+    <h2 class="section-title">How It Works</h2>
+
+    <p class="p1-para">
+        The system takes C/C++ source code as input through a Streamlit interface and writes it to a temporary file for
+        processing.
+    </p>
+
+    <p class="p1-para">
+        LLVM clang-tidy is executed on the file to perform static analysis and generate low-level compiler diagnostics
+        including warnings and errors.
+    </p>
+
+    <p class="p1-para">
+        A Python parsing layer processes the raw clang-tidy output, extracting structured issue data such as file
+        location,
+        rule ID, severity, and diagnostic message.
+    </p>
+
+    <p class="p1-para">
+        Each extracted issue is sent to a Large Language Model (GPT-4.1-mini), which generates structured explanations
+        including cause, impact, and recommended fixes.
+    </p>
+
+    <p class="p1-para">
+        The final results are aggregated and displayed in a Streamlit dashboard as a structured debugging report with
+        summaries and detailed issue breakdowns.
+    </p>
+
+    <h2 class="section-title">My Role</h2>
+
+    <ul class="feature-list">
+        <li class="bullet">Designed and implemented the full end-to-end analysis pipeline (code input → static analysis
+            →
+            parsing → AI enrichment → UI output)</li>
+        <li class="bullet">Integrated LLVM clang-tidy for real C/C++ static code analysis and diagnostic generation</li>
+        <li class="bullet">Built a Python-based parsing engine to convert raw compiler output into structured issue
+            objects
+        </li>
+        <li class="bullet">Engineered LLM integration to generate deterministic, structured explanations of detected
+            issues
+        </li>
+        <li class="bullet">Developed Streamlit-based UI for interactive code submission and real-time visualization of
+            analysis results</li>
+        <li class="bullet">Handled system debugging, including output capture, regex parsing refinement, and pipeline
+            reliability improvements</li>
+    </ul>
+
+    <div class="challenge">
+        <h2 class="section-title">Challenges & Solutions</h2>
+
+        <p class="p-a-list"><strong>Clang-tidy output contained inconsistent formatting across different warning
+                types</strong><br>
+            Solution: Developed a robust Python parsing layer using regex and structured extraction logic to normalize
+            diagnostic outputs into consistent issue objects.</p>
+
+        <p class="p-a-list"><strong>PowerShell output redirection caused corrupted or incomplete clang-tidy
+                logs</strong><br>
+            Solution: Switched to CMD-based execution with proper stderr redirection to ensure clean and complete tool
+            output capture.</p>
+
+        <p class="p-a-list"><strong>Regex patterns initially failed due to variability in file paths and diagnostic
+                formats</strong><br>
+            Solution: Refined parsing logic to handle Windows paths, multi-line warnings, and clang-tidy’s structured
+            output
+            format.</p>
+
+        <p class="p-a-list"><strong>AI responses were inconsistent and sometimes deviated from expected
+                format</strong><br>
+            Solution: Enforced strict system prompt constraints to ensure deterministic, structured explanation output.
+        </p>
+
+        <p class="p-a-list"><strong>Multiple issues needed scalable processing instead of single-instance
+                handling</strong><br>
+            Solution: Implemented iterative issue processing pipeline to handle batch clang-tidy diagnostics
+            efficiently.
+        </p>
+
+        <p class="p-a-list"><strong>Integration complexity between static analysis, parsing, and UI layers</strong><br>
+            Solution: Refactored system into modular pipeline architecture separating analysis, processing, and
+            presentation
+            layers.</p>
+    </div>
+
+    <h2 class="section-title">What I Learned</h2>
+    <ul class="feature-list">
+        <li class="bullet">LLVM-based static analysis using clang-tidy for real compiler diagnostics</li>
+        <li class="bullet">Designing multi-stage software pipelines (analysis → parsing → AI → UI)</li>
+        <li class="bullet">Structured data extraction from unstructured tool output using Python</li>
+        <li class="bullet">LLM prompt engineering for deterministic and formatted responses</li>
+        <li class="bullet">Debugging real-world integration issues across CLI tools, APIs, and UI layers</li>
+        <li class="bullet">Importance of separation of concerns in scalable system design</li>
+    </ul>
+
+    <h2 class="section-title">Future Improvements</h2>
+    <ul class="feature-list">
+        <li class="bullet">Support multi-file project analysis using compilation database (CMake integration)</li>
+        <li class="bullet">Add AST-level analysis for deeper semantic understanding of C/C++ code</li>
+        <li class="bullet">Introduce issue deduplication and root-cause grouping for large codebases</li>
+        <li class="bullet">Improve AI explanations with context-aware code slicing</li>
+        <li class="bullet">Deploy as a web-based developer tool with persistent project storage</li>
+    </ul>
+
+    <h2 class="section-title">Demo</h2>
+    <p class="p1-para">Project video is available in the README file.</p>
+
+    <hr>
+
+    <section class="c-info" id="contact">
+        <h2 class="c-head">Contact Me</h2>
+        <p>Email: <a class="clink" href="mailto:zainaboyekade@gmail.com">zainaboyekade@gmail.com</a></p>
+        <p>GitHub: <a class="clink" href="https://github.com/zainaboyekade-dot"
+                target="_blank">github.com/zainaboyekade-dot</a></p>
+    </section>
+
+    <footer>
+        <p> &copy; 2026 Zainab Oyekade. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

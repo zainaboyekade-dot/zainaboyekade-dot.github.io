@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zainab Oyekade | AUTOMATED PLANT WATERING SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">Zaite Systems</a>
+        <a href="about.html">About & Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>AUTOMATED PLANT WATERING SYSTEM</h1>
+    </section>
+
+    <hr>
+
+    <section class="box2">
+        <h2 class="shead">Project Overview</h2>
+
+        <div class="about-content">
+            <img id="headshot" src="images/full iot picture.jpg" alt="Automated Plant Watering System" width="300">
+
+            <div class="about-text">
+                <p class="p-a-list">
+                    This project is an IoT-based automated plant watering system that uses an
+                    Arduino, soil moisture sensor, and water pump to monitor soil conditions
+                    and water plants automatically. It also integrates the Blynk app for
+                    real-time monitoring and remote control.</p>
+                <p>
+                    <a class="link" href="https://github.com/zainaboyekade-dot/smart-plant-watering-system"
+                        target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="section-title">Key Features</h2>
+    <ul class="feature-list">
+        <li>Automatically waters plants when soil is dry</li>
+        <li>Stops watering when soil is sufficiently wet</li>
+        <li>Manual pump control via Blynk app</li>
+        <li>Real-time moisture and system status monitoring</li>
+        <li>LED and buzzer alerts for system feedback</li>
+        <li>Mobile notifications for watering events</li>
+    </ul>
+
+    <h2 class="section-title">Tools & Components Used</h2>
+
+    <h2>Hardware</h2>
+
+    <ul class="feature-list">
+        <li class="bullet">Arduino Uno Rev 2</li>
+        <li class="bullet">Capacitive Soil Moisture Sensor</li>
+        <li class="bullet">5V Water Pump (externally powered)</li>
+        <li class="bullet">Relay Module</li>
+        <li class="bullet">LED + resistor</li>
+        <li class="bullet">Buzzer</li>
+        <li class="bullet">Breadboard + jumper wires</li>
+        <li class="bullet">5V USB Power Bank</li>
+    </ul>
+
+    <h2>Software</h2>
+    <ul class="feature-list">
+        <li class="bullet">Arduino IDE</li>
+        <li class="bullet">Blynk IoT App</li>
+    </ul>
+
+    <h2 class="section-title">How It Works</h2>
+    <p class="p1-para">
+        The soil moisture sensor reads moisture levels in the soil. The Arduino processes the data and determines
+        whether the soil is dry or wet.
+    </p>
+    <p class="p1-para">
+        If the soil is dry, the relay activates the water pump. If the soil is wet, the pump is turned off.
+    </p>
+    <p class="p1-para">
+        Status updates are sent to the Blynk app in real time.
+    </p>
+
+    <h2 class="section-title">My Role</h2>
+    <ul class="feature-list">
+        <li class="bullet">Designed and built the full system architecture</li>
+        <li class="bullet">Programmed Arduino to control sensors and relay logic</li>
+        <li class="bullet">Integrated IoT monitoring using Blynk</li>
+        <li class="bullet">Handled wiring, debugging, and hardware testing</li>
+        <li class="bullet">Implemented safety control for pump operation</li>
+    </ul>
+
+    <div class="challenge">
+        <h2 class="section-title">Challenges & Solutions</h2>
+
+        <p class="p-a-list"><strong>Pump required more power than Arduino could provide</strong><br>
+            Solution: Used an external 5V USB power source for safe operation.</p>
+
+        <p class="p-a-list"><strong>Sensor readings were unstable due to wiring issues</strong><br>
+            Solution: Rewired using jumper wires for stable connections.</p>
+
+        <p class="p-a-list"><strong>Pump would not stop correctly</strong><br>
+            Solution: Added threshold buffering (hysteresis) in code.</p>
+
+        <p class="p-a-list"><strong>Wi-Fi and Arduino control overload</strong><br>
+            Solution: Split system — Arduino handles hardware, ESP/D1 Mini handles Wi-Fi.</p>
+
+        <p class="p-a-list"><strong>Voltage mismatch between Arduino and ESP</strong><br>
+            Solution: Used a voltage divider to protect components.</p>
+
+        <p class="p-a-list"><strong>Serial communication issues</strong><br>
+            Solution: Adjusted baud rates and fixed wiring for stable sync.</p>
+    </div>
+
+    <h2 class="section-title">What I Learned</h2>
+    <ul class="feature-list">
+        <li class="bullet">Arduino programming and debugging</li>
+        <li class="bullet">Sensor calibration and hardware integration</li>
+        <li class="bullet">Relay control and safe power management</li>
+        <li class="bullet">IoT communication using Blynk</li>
+        <li class="bullet">Problem-solving through hardware troubleshooting</li>
+    </ul>
+
+    <h2 class="section-title">Future Improvements</h2>
+    <ul class="feature-list">
+        <li class="bullet">Add multiple plant sensor support</li>
+        <li class="bullet">Implement predictive watering logic</li>
+        <li class="bullet">Build web dashboard for monitoring</li>
+        <li class="bullet">Add battery monitoring system</li>
+    </ul>
+
+    <h2 class="section-title">Demo</h2>
+    <p class="p1-para">Project images and videos are available in the repository folders.</p>
+
+    <hr>
+
+    <section class="c-info" id="contact">
+        <h2 class="c-head">Contact Me</h2>
+        <p>Email: <a class="clink" href="mailto:zainaboyekade@gmail.com">zainaboyekade@gmail.com</a></p>
+        <p>GitHub: <a class="clink" href="https://github.com/zainaboyekade-dot"
+                target="_blank">github.com/zainaboyekade-dot</a></p>
+    </section>
+
+    <footer>
+        <p> &copy; 2026 Zainab Oyekade. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
