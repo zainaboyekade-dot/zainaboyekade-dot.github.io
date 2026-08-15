@@ -29,10 +29,15 @@
 
             <div class="about-text">
                 <p class="p-a-list">
-                    This project is an IoT-based automated plant watering system that uses an
-                    Arduino, soil moisture sensor, and water pump to monitor soil conditions
-                    and water plants automatically. It also integrates the Blynk app for
-                    real-time monitoring and remote control.</p>
+                    This project is an IoT-based automated plant watering system designed to monitor soil conditions
+                    and automate irrigation using a microcontroller, soil moisture sensor, relay module, and water pump.
+                </p>
+
+                <p class="p-a-list">
+                    The system processes real-time sensor readings to determine when watering is needed and integrates
+                    the Blynk platform for wireless monitoring and remote system control.
+                </p>
+
                 <p>
                     <a class="link" href="https://github.com/zainaboyekade-dot/smart-plant-watering-system"
                         target="_blank">GitHub Repository</a>
@@ -43,18 +48,17 @@
 
     <h2 class="section-title">Key Features</h2>
     <ul class="feature-list">
-        <li>Automatically waters plants when soil is dry</li>
-        <li>Stops watering when soil is sufficiently wet</li>
-        <li>Manual pump control via Blynk app</li>
-        <li>Real-time moisture and system status monitoring</li>
-        <li>LED and buzzer alerts for system feedback</li>
-        <li>Mobile notifications for watering events</li>
+        <li>Automated irrigation based on real-time soil moisture readings</li>
+        <li>Threshold-based pump activation and shutdown control</li>
+        <li>Remote pump control through the Blynk IoT platform</li>
+        <li>Real-time monitoring of moisture levels and system status</li>
+        <li>LED and buzzer indicators for hardware feedback and system alerts</li>
+        <li>Mobile notifications for watering events and system updates</li>
     </ul>
 
     <h2 class="section-title">Tools & Components Used</h2>
 
     <h2>Hardware</h2>
-
     <ul class="feature-list">
         <li class="bullet">Arduino Uno Rev 2</li>
         <li class="bullet">Capacitive Soil Moisture Sensor</li>
@@ -69,67 +73,76 @@
     <h2>Software</h2>
     <ul class="feature-list">
         <li class="bullet">Arduino IDE</li>
+        <li class="bullet">Arduino C/C++</li>
         <li class="bullet">Blynk IoT App</li>
     </ul>
 
     <h2 class="section-title">How It Works</h2>
     <p class="p1-para">
-        The soil moisture sensor reads moisture levels in the soil. The Arduino processes the data and determines
-        whether the soil is dry or wet.
+        The capacitive soil moisture sensor continuously measures soil conditions and sends readings to the Arduino
+        microcontroller for processing.
     </p>
+
     <p class="p1-para">
-        If the soil is dry, the relay activates the water pump. If the soil is wet, the pump is turned off.
+        The Arduino compares sensor values against predefined moisture thresholds and controls the relay module to
+        activate or deactivate the water pump when irrigation is required.
     </p>
+
     <p class="p1-para">
-        Status updates are sent to the Blynk app in real time.
+        System status and sensor data are communicated through the Blynk IoT platform, enabling remote monitoring and
+        manual control of the system.
     </p>
 
     <h2 class="section-title">My Role</h2>
     <ul class="feature-list">
-        <li class="bullet">Designed and built the full system architecture</li>
-        <li class="bullet">Programmed Arduino to control sensors and relay logic</li>
-        <li class="bullet">Integrated IoT monitoring using Blynk</li>
-        <li class="bullet">Handled wiring, debugging, and hardware testing</li>
-        <li class="bullet">Implemented safety control for pump operation</li>
+        <li class="bullet">Designed and assembled the embedded system using sensors, relay control, and actuator
+            components
+        </li>
+        <li class="bullet">Programmed Arduino logic for sensor processing and automated irrigation control</li>
+        <li class="bullet">Integrated Blynk IoT monitoring and remote control functionality</li>
+        <li class="bullet">Performed hardware wiring, debugging, and system testing</li>
+        <li class="bullet">Implemented feedback mechanisms using LEDs and buzzer indicators</li>
     </ul>
 
     <div class="challenge">
         <h2 class="section-title">Challenges & Solutions</h2>
 
-        <p class="p-a-list"><strong>Pump required more power than Arduino could provide</strong><br>
-            Solution: Used an external 5V USB power source for safe operation.</p>
+        <p class="p-a-list">
+            <strong>Pump required more power than the microcontroller could provide</strong><br>
+            Solution: Used an external 5V power source and relay module to safely control the pump.
+        </p>
 
-        <p class="p-a-list"><strong>Sensor readings were unstable due to wiring issues</strong><br>
-            Solution: Rewired using jumper wires for stable connections.</p>
+        <p class="p-a-list">
+            <strong>Unstable sensor readings during testing</strong><br>
+            Solution: Improved wiring connections and adjusted sensor handling to achieve more reliable readings.
+        </p>
 
-        <p class="p-a-list"><strong>Pump would not stop correctly</strong><br>
-            Solution: Added threshold buffering (hysteresis) in code.</p>
+        <p class="p-a-list">
+            <strong>Pump switching behavior required refinement</strong><br>
+            Solution: Implemented threshold adjustments in the control logic to improve automated watering behavior.
+        </p>
 
-        <p class="p-a-list"><strong>Wi-Fi and Arduino control overload</strong><br>
-            Solution: Split system — Arduino handles hardware, ESP/D1 Mini handles Wi-Fi.</p>
-
-        <p class="p-a-list"><strong>Voltage mismatch between Arduino and ESP</strong><br>
-            Solution: Used a voltage divider to protect components.</p>
-
-        <p class="p-a-list"><strong>Serial communication issues</strong><br>
-            Solution: Adjusted baud rates and fixed wiring for stable sync.</p>
+        <p class="p-a-list">
+            <strong>Hardware integration and debugging issues</strong><br>
+            Solution: Tested individual components, verified connections, and iterated on the system design.
+        </p>
     </div>
 
     <h2 class="section-title">What I Learned</h2>
     <ul class="feature-list">
-        <li class="bullet">Arduino programming and debugging</li>
-        <li class="bullet">Sensor calibration and hardware integration</li>
-        <li class="bullet">Relay control and safe power management</li>
-        <li class="bullet">IoT communication using Blynk</li>
-        <li class="bullet">Problem-solving through hardware troubleshooting</li>
+        <li class="bullet">Embedded programming and microcontroller debugging</li>
+        <li class="bullet">Sensor integration, calibration, and real-world data handling</li>
+        <li class="bullet">Relay-based actuator control and power management</li>
+        <li class="bullet">IoT communication and remote monitoring using Blynk</li>
+        <li class="bullet">Hardware troubleshooting and iterative system improvement</li>
     </ul>
 
     <h2 class="section-title">Future Improvements</h2>
     <ul class="feature-list">
-        <li class="bullet">Add multiple plant sensor support</li>
-        <li class="bullet">Implement predictive watering logic</li>
-        <li class="bullet">Build web dashboard for monitoring</li>
-        <li class="bullet">Add battery monitoring system</li>
+        <li class="bullet">Expand support for multiple plant monitoring</li>
+        <li class="bullet">Implement adaptive watering strategies based on historical data</li>
+        <li class="bullet">Develop a web dashboard for enhanced monitoring and visualization</li>
+        <li class="bullet">Add battery level monitoring and power optimization features</li>
     </ul>
 
     <h2 class="section-title">Demo</h2>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zainab Oyekade | ASTRART</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">Zaite Systems</a>
+        <a href="about.html">About & Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>ASTRART</h1>
+    </section>
+
+    <hr>
+
+    <section class="box2">
+        <h2 class="shead">Project Overview</h2>
+
+        <div class="about-content">
+            <img id="headshot" src="images/astra.png" alt="AstraRT Embedded Runtime Framework" width="300">
+
+            <div class="about-text">
+
+                <p class="p-a-list">
+                    AstraRT is a modular embedded firmware runtime framework developed for the STM32F446RE
+                    microcontroller. The project provides a reusable software architecture for building
+                    embedded applications by organizing hardware abstraction, peripheral drivers, runtime
+                    services, and application logic into independent layers.
+                </p>
+
+                <p class="p-a-list">
+                    The framework integrates multiple communication peripherals, sensor drivers, task
+                    scheduling, telemetry, and diagnostics into a structured runtime environment designed
+                    for maintainability, scalability, and hardware reuse.
+                </p>
+
+                <p>
+                    <a class="link" href="https://github.com/zainaboyekade-dot/astrart" target="_blank">
+                        GitHub Repository
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <h2 class="section-title">Key Features</h2>
+
+    <ul class="feature-list">
+        <li>Modular embedded firmware framework built for the STM32F446RE microcontroller</li>
+        <li>Layered software architecture separating hardware abstraction, peripheral drivers, runtime services, and
+            application logic</li>
+        <li>Supports multiple communication interfaces including GPIO, I2C, SPI, and UART</li>
+        <li>Integrates reusable drivers for BME280 and BMI160 sensors</li>
+        <li>Implements runtime services including task scheduling, telemetry, command handling, and system diagnostics
+        </li>
+        <li>Provides reusable interfaces for developing and extending embedded applications</li>
+        <li>Validated on physical STM32 hardware through sensor communication and runtime testing</li>
+    </ul>
+
+    <h2 class="section-title">Tools & Technologies Used</h2>
+
+    <h2>Hardware Platform</h2>
+    <ul class="feature-list">
+        <li class="bullet">STM32F446RE Nucleo Board</li>
+        <li class="bullet">BME280 Environmental Sensor</li>
+        <li class="bullet">BMI160 IMU Sensor</li>
+    </ul>
+
+    <h2>Firmware Development</h2>
+    <ul class="feature-list">
+        <li class="bullet">C</li>
+        <li class="bullet">STM32CubeIDE</li>
+        <li class="bullet">STM32 HAL</li>
+        <li class="bullet">CMSIS</li>
+    </ul>
+
+    <h2>Communication Interfaces</h2>
+    <ul class="feature-list">
+        <li class="bullet">GPIO</li>
+        <li class="bullet">UART</li>
+        <li class="bullet">SPI</li>
+        <li class="bullet">I2C</li>
+    </ul>
+
+    <h2>Development Practices</h2>
+    <ul class="feature-list">
+        <li class="bullet">Embedded Debugging</li>
+        <li class="bullet">Driver Development</li>
+        <li class="bullet">Firmware Architecture</li>
+        <li class="bullet">Hardware Testing</li>
+    </ul>
+
+
+    <h2 class="section-title">How It Works</h2>
+    <p class="p1-para">
+        AstraRT initializes the STM32F446RE platform by configuring system clocks, GPIO, and communication peripherals
+        through the STM32 HAL. This establishes the hardware foundation required for the runtime environment.
+    </p>
+
+    <p class="p1-para">
+        Hardware peripherals are accessed through modular driver interfaces for GPIO, I2C, SPI, and UART, allowing
+        application code to communicate with devices without directly interacting with low-level hardware configuration.
+    </p>
+
+    <p class="p1-para">
+        Sensor drivers for the BME280 environmental sensor and BMI160 inertial measurement unit communicate through the
+        framework's hardware abstraction layer to collect and organize device data.
+    </p>
+
+    <p class="p1-para">
+        Runtime services manage periodic tasks, telemetry, command handling, and system diagnostics, providing a
+        structured
+        environment for embedded applications.
+    </p>
+
+    <p class="p1-para">
+        The layered architecture separates hardware interfaces, runtime services, and application logic, making the
+        framework easier to extend, debug, and reuse across future embedded projects.
+    </p>
+
+    <h2 class="section-title">My Role</h2>
+    <ul class="feature-list">
+
+        <li class="bullet">
+            Designed the overall firmware architecture, organizing the project into hardware abstraction, driver,
+            runtime,
+            and application layers.
+        </li>
+
+        <li class="bullet">
+            Developed reusable interfaces for GPIO, I2C, SPI, and UART communication using STM32 HAL.
+        </li>
+
+        <li class="bullet">
+            Integrated BME280 and BMI160 sensor drivers into the framework for structured hardware communication.
+        </li>
+
+        <li class="bullet">
+            Implemented runtime services including task scheduling, telemetry, command handling, and system diagnostics.
+        </li>
+
+        <li class="bullet">
+            Validated firmware functionality through hardware testing, peripheral debugging, and sensor communication.
+        </li>
+
+        <li class="bullet">
+            Structured the framework for maintainability and reuse in future embedded systems projects.
+        </li>
+
+    </ul>
+
+    <div class="challenge">
+        <h2 class="section-title">Challenges & Solutions</h2>
+
+        <p class="p-a-list">
+            <strong>Designing a modular firmware architecture for long-term maintainability</strong><br>
+            Solution: Organized the framework into separate hardware abstraction, peripheral driver, runtime service,
+            and
+            application layers to improve modularity and code reuse.
+        </p>
+
+        <p class="p-a-list">
+            <strong>Managing dependencies between embedded software modules</strong><br>
+            Solution: Refined project organization, interfaces, and build configuration to reduce coupling and maintain
+            clean communication between framework components.
+        </p>
+
+        <p class="p-a-list">
+            <strong>Developing reliable communication and debugging interfaces</strong><br>
+            Solution: Implemented UART-based command handling and debugging utilities to monitor runtime behavior,
+            telemetry, and system status.
+        </p>
+
+        <p class="p-a-list">
+            <strong>Integrating external sensors through hardware communication interfaces</strong><br>
+            Solution: Validated I²C and SPI communication with BME280 and BMI160 sensors while debugging
+            hardware-software
+            interactions during testing.
+        </p>
+
+        <p class="p-a-list">
+            <strong>Building a framework that could support future embedded projects</strong><br>
+            Solution: Designed reusable runtime services and modular interfaces that simplify the addition of new
+            sensors,
+            peripherals, and application features.
+        </p>
+
+    </div>
+
+    <h2 class="section-title">What I Learned</h2>
+    <ul class="feature-list">
+        <li class="bullet">Designing modular firmware architectures for embedded systems</li>
+        <li class="bullet">Developing reusable hardware abstraction layers and peripheral drivers</li>
+        <li class="bullet">Implementing communication interfaces using GPIO, I²C, SPI, and UART</li>
+        <li class="bullet">Integrating external sensors into a structured runtime framework</li>
+        <li class="bullet">Debugging embedded hardware and firmware interactions on real STM32 hardware</li>
+        <li class="bullet">Building scalable firmware with separation of concerns and reusable software components</li>
+    </ul>
+
+    <h2 class="section-title">Future Improvements</h2>
+    <ul class="feature-list">
+        <li class="bullet">Expand support for additional sensors and communication peripherals</li>
+        <li class="bullet">Introduce priority-based task scheduling for more advanced runtime management</li>
+        <li class="bullet">Add persistent configuration storage using onboard Flash memory</li>
+        <li class="bullet">Implement configurable logging and diagnostic services for improved debugging</li>
+        <li class="bullet">Package AstraRT as a reusable embedded framework for future STM32-based applications</li>
+    </ul>
+
+    <h2 class="section-title">Demo</h2>
+    <p class="p1-para">
+        Source code, project documentation, and runtime demonstrations are available in the GitHub repository.
+    </p>
+
+    <hr>
+
+    <section class="c-info" id="contact">
+        <h2 class="c-head">Contact Me</h2>
+        <p>Email: <a class="clink" href="mailto:zainaboyekade@gmail.com">zainaboyekade@gmail.com</a></p>
+        <p>GitHub: <a class="clink" href="https://github.com/zainaboyekade-dot"
+                target="_blank">github.com/zainaboyekade-dot</a></p>
+    </section>
+
+    <footer>
+        <p> &copy; 2026 Zainab Oyekade. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
